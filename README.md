@@ -138,15 +138,15 @@ iamforge-aws/
 │   ├── 03-iam-dashboard-mfa-enabled.webp
 │   ├── 04-mfa-device-method.webp
 │   ├── 05-authenticator-enrollment-redacted.webp
-│   ├── 07-mfa-device-assigned.jpg
-│   ├── 08-mfa-signin-challenge.jpg
-│   ├── 09-console-home.jpg
-│   ├── 10-iam-users-empty.jpg
-│   ├── 11-create-iam-user.jpg
-│   ├── 12-assign-user-permissions.jpg
-│   ├── 13-review-user-permissions.jpg
-│   ├── 14-iam-user-created.jpg
-│   └── 15-iam-user-list.jpg
+│   ├── 06-mfa-device-assigned.webp
+│   ├── 07-mfa-signin-challenge.webp
+│   ├── 08-console-home.webp
+│   ├── 09-iam-users-empty.webp
+│   ├── 10-create-iam-user.webp
+│   ├── 11-assign-user-permissions.webp
+│   ├── 12-review-user-permissions.webp
+│   ├── 13-iam-user-created.webp
+│   └── 14-iam-user-list.webp
 └── LICENSE
 ```
 
