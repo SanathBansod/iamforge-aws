@@ -29,34 +29,34 @@ The goal is to record **what changed, what was verified, and what still needs at
 
 The first two screens capture the root sign-in flow and the user-type selection. Identity fields have been obscured in the shared screenshots.
 
-<p align="center"><img src="assets/01-root-signin.jpg" alt="AWS root sign-in password step" width="92%" /></p>
-<p align="center"><img src="assets/02-signin-account-type.jpg" alt="AWS sign-in user type selection" width="92%" /></p>
+<p align="center"><img src="assets/01-root-signin.webp" alt="AWS root sign-in password step" width="92%" /></p>
+<p align="center"><img src="assets/02-signin-account-type.webp" alt="AWS sign-in user type selection" width="92%" /></p>
 
 ### A2. Review the IAM security posture
 
 The supplied dashboard shows the root-user MFA check in a passing state and no active root access keys. This is the **post-configuration state** in the captured evidence; this guide does not claim a measured before-and-after result.
 
-<p align="center"><img src="assets/03-iam-dashboard-mfa-enabled.jpg" alt="IAM dashboard showing root MFA enabled" width="100%" /></p>
+<p align="center"><img src="assets/03-iam-dashboard-mfa-enabled.webp" alt="IAM dashboard showing root MFA enabled" width="100%" /></p>
 
 ### A3. Choose the MFA method
 
 The console offers multiple MFA methods. This lab follows the authenticator-app route for a virtual time-based code.
 
-<p align="center"><img src="assets/04-mfa-device-method.jpg" alt="AWS MFA device method selection" width="100%" /></p>
+<p align="center"><img src="assets/04-mfa-device-method.webp" alt="AWS MFA device method selection" width="100%" /></p>
 
 ### A4. Enroll the authenticator app
 
 The enrollment screen describes scanning the QR or using a secret key. The shared seed is sensitive, so the QR block is covered in this repository copy. In the real setup, keep the seed private and enter the required consecutive codes only in the AWS console.
 
-<p align="center"><img src="assets/05-authenticator-enrollment-redacted.jpg" alt="Authenticator enrollment with QR seed redacted" width="100%" /></p>
+<p align="center"><img src="assets/05-authenticator-enrollment-redacted.webp" alt="Authenticator enrollment with QR seed redacted" width="100%" /></p>
 
 ### A5. Confirm assignment and test sign-in
 
 The security-credentials screen contains an **MFA device assigned** confirmation. A later screen shows the MFA challenge during sign-in, and the console-home image records that the workflow reached the console.
 
-<p align="center"><img src="assets/07-mfa-device-assigned.jpg" alt="AWS confirms MFA device assignment" width="100%" /></p>
-<p align="center"><img src="assets/08-mfa-signin-challenge.jpg" alt="AWS sign-in MFA challenge" width="100%" /></p>
-<p align="center"><img src="assets/09-console-home.jpg" alt="AWS console home after sign-in" width="100%" /></p>
+<p align="center"><img src="assets/06-mfa-device-assigned.webp" alt="AWS confirms MFA device assignment" width="100%" /></p>
+<p align="center"><img src="assets/07-mfa-signin-challenge.webp" alt="AWS sign-in MFA challenge" width="100%" /></p>
+<p align="center"><img src="assets/08-console-home.webp" alt="AWS console home after sign-in" width="100%" /></p>
 
 ### Track A / Verification record
 
@@ -73,27 +73,27 @@ The security-credentials screen contains an **MFA device assigned** confirmation
 
 The initial users page shows no IAM users before the test identity is created.
 
-<p align="center"><img src="assets/10-iam-users-empty.jpg" alt="IAM users list before user creation" width="100%" /></p>
+<p align="center"><img src="assets/09-iam-users-empty.webp" alt="IAM users list before user creation" width="100%" /></p>
 
 ### B2. Create the separate user
 
 The captured flow creates a separate IAM identity rather than using the root user for everyday tasks.
 
-<p align="center"><img src="assets/11-create-iam-user.jpg" alt="AWS IAM create-user form" width="100%" /></p>
+<p align="center"><img src="assets/10-create-iam-user.webp" alt="AWS IAM create-user form" width="100%" /></p>
 
 ### B3. Review the permission choice
 
 The permission workflow uses a managed policy path. The review screen identifies **AmazonEC2ReadOnlyAccess**. Read-only access is narrower than administrative access, but it should still be granted only when needed.
 
-<p align="center"><img src="assets/12-assign-user-permissions.jpg" alt="IAM permission assignment options" width="100%" /></p>
-<p align="center"><img src="assets/13-review-user-permissions.jpg" alt="Review screen showing AmazonEC2ReadOnlyAccess" width="100%" /></p>
+<p align="center"><img src="assets/11-assign-user-permissions.webp" alt="IAM permission assignment options" width="100%" /></p>
+<p align="center"><img src="assets/12-review-user-permissions.webp" alt="Review screen showing AmazonEC2ReadOnlyAccess" width="100%" /></p>
 
 ### B4. Confirm creation and inspect the list
 
 The success screen confirms user creation, and the final users-list screenshot shows the created identity.
 
-<p align="center"><img src="assets/14-iam-user-created.jpg" alt="IAM user creation success screen" width="100%" /></p>
-<p align="center"><img src="assets/15-iam-user-list.jpg" alt="IAM users list showing created user" width="100%" /></p>
+<p align="center"><img src="assets/13-iam-user-created.webp" alt="IAM user creation success screen" width="100%" /></p>
+<p align="center"><img src="assets/14-iam-user-list.webp" alt="IAM users list showing created user" width="100%" /></p>
 
 ### Track B / Verification record
 
@@ -133,11 +133,11 @@ iamforge-aws/
 ├── iamforge-banner.svg          # original project identity
 ├── identity-hardening-map.svg   # original workflow diagram
 ├── assets/
-│   ├── 01-root-signin.jpg
-│   ├── 02-signin-account-type.jpg
-│   ├── 03-iam-dashboard-mfa-enabled.jpg
-│   ├── 04-mfa-device-method.jpg
-│   ├── 05-authenticator-enrollment-redacted.jpg
+│   ├── 01-root-signin.webp
+│   ├── 02-signin-account-type.webp
+│   ├── 03-iam-dashboard-mfa-enabled.webp
+│   ├── 04-mfa-device-method.webp
+│   ├── 05-authenticator-enrollment-redacted.webp
 │   ├── 07-mfa-device-assigned.jpg
 │   ├── 08-mfa-signin-challenge.jpg
 │   ├── 09-console-home.jpg
